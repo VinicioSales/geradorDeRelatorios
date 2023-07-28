@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar de Relatórios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    <link rel="stylesheet" href="../static/styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Monomaniac+One&family=Rubik:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <button id="sair-btn">Sair</button>
+
+        <div class="titulo">
+            <label>Relatório de Demandas</label>
+        </div>
+        <div class="inputs">
+            <input class="input-datas" type="text" id="data-inicio" placeholder="Data inicial" onfocus="(this.type='date')" onblur="(this.type='text')">
+            <input class="input-datas" type="text" id="data-final" placeholder="Data final" onfocus="(this.type='date')" onblur="(this.type='text')">
+        </div>
+        <div class="botoes">
+            <button class="botao" id="enviar-relatorios">Enviar Relatórios</button>
+        </div>
+        <div class="footer">
+            <a href="https://parceirodocontador.com.br/store" target="_blank" class="footer" id="footer">Feito por Parceiro do Contador</a>
+        </div>
+    </div>
+    <div id="modal-relatorio-enviado" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <p>Relatórios enviados com sucesso!</p>
+        </div>
+    </div>
+    <div class="modal-carregando" class="modal">
+        <div class="carregando">
+            <span class="fechar-modal">&times;</span>
+            <img src="{{ url_for('static', filename='img/loading.png') }}" alt="carregando...">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" type="module"></script>
+</body>
+</html>

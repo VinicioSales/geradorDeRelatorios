@@ -1,0 +1,3 @@
+This project consists of a web interface, featuring a login and authentication system, that allows the user to input a date range for which they want sales reports from their Omie ERP database to be generated. After the reports are generated, they are automatically sent to an SFTP server.
+
+This project was carried out by me for the company "Parceiro do Contador". Due to source code rights and sensitive data, I removed the sensitive codes from the backend functions.

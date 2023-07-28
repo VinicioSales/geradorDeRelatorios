@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Monomaniac+One&family=Rubik:ital,wght@0,400;0,600;1,400&display=swap');
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #151D2F;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.container {
+    background: #2B304D;
+    width: 25vw;
+    height: 70vh;
+    margin: 5%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 30% 30% 10%;
+    border-radius: 16px;
+    box-shadow: 16px 22px 13px 0px rgba(0, 0, 0, 0.16);
+    grid-template-areas:    "t"
+                            "i"
+                            "b"
+                            "f";
+}
+
+
+
+.titulo {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    grid-area: t;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 150%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 20%;
+}
+
+.inputs {
+    grid-area: i;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input {
+    width: 75%;
+    height: 30%;
+    border: none;
+    background: #343A5B;
+    outline: none;
+    margin: 7px;
+    color: #FFF;
+    text-align: center;
+    font-family: arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    padding-left: 4%;
+}
+
+.input::-webkit-calendar-picker-indicator {
+    display: none;
+    border: 10px;
+}
+
+.input:focus {
+    border-left: 4px solid #FF771E;
+    opacity: 100%;
+}
+
+#labelConfirmarSenha {
+    font-size: 12px;
+}
+
+.botoes {
+    grid-area: b;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    padding-top: 5%;
+    flex-direction: column;
+}
+
+.botao {
+    margin-bottom: 8px;
+    width: 80%;
+    height: 25%;
+    border-radius: 5px;
+    border: none;
+    background: #D9D9D9;
+    color: #151D2F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 70%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.botao:hover {
+    background-color: #FF771E;
+    color: #fff;
+    scale: 103%;
+}
+
+.botao:disabled {
+    cursor: default;
+    opacity: 30%;
+}
+
+.botao:hover:disabled {
+    background-color: #D9D9D9;
+    scale: 100%;
+    color: #151D2F;
+}
+
+.footer {
+    grid-area: f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #D9D9D9;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.80;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer:hover {
+    opacity: 100%;
+    color: #FF771E;
+}
+
+.fechar-modal {
+    color: #FF771E;
+    float:inline-end;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar-modal:hover,
+.fechar-modal:focus {
+    color: #E26817;
+    text-decoration: none;
+    cursor: pointer;
+    scale: 110%;
+}
+
+.modal-carregando {
+    display: none;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carregando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 20%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#mostrarSenha {
+    position: absolute;
+    right: 10%;
+    top: 45%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+
+
+

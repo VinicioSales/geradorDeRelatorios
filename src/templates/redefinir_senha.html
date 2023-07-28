@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/redefinir_senha.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Monomaniac+One&family=Rubik:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div id="titulo" class="titulo">
+            <label>Redefinir senha</label>
+        </div>
+        <div class="inputs">
+            <label id="labelSenha" for="input-senha"></label>
+            <input class="input" type="password" id="input-senha" placeholder="nova senha">
+            <button type="button" id="mostrarSenha" onclick="mostrarSenha('input-senha')">👁️‍🗨️</button>
+            <label id="labelConfirmarSenha" for="input-confirmar-senha"></label>
+            <input class="input" type="password" id="input-confirmar-senha" placeholder="confirmar senha">
+            <input class="input" type="text" id="input-token" placeholder="token">
+        </div>
+        <div class="botoes">
+            <button class="botao" id="registrar">Redefinir senha</button>
+        </div>
+        <div class="footer">
+            <a href="https://parceirodocontador.com.br/store" target="_blank" class="footer" id="footer">Feito por Parceiro do Contador</a>
+        </div>
+    </div>
+    <div id="modal-sucesso" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <p>Senha redefinida com sucesso!</p>
+        </div>
+    </div>
+    <div class="modal-carregando" class="modal">
+        <div class="carregando">
+            <span class="fechar-modal">&times;</span>
+            <img src="{{ url_for('static', filename='img/loading.png') }}" alt="carregando...">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/redefinir_senha.js') }}" type="module"></script>
+</body>
+</html>

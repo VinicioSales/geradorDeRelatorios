@@ -1,0 +1,14 @@
+venv
+docs/LAYOUT_DIARIO_DEMANDA.pdf
+.env
+src/database/__pycache__
+src/api/__pycache__
+docs/LAYOUT_DIARIO_DEMANDA.pdf
+src/data/__pycache__
+src/errors/__pycache__
+src/modules/funcs/__pycache__
+src/static/__pycache__
+src/modules/api/__pycache__
+credenciais_google.json
+node_modules
+docs

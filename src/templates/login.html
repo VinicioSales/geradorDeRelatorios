@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Relatórios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <link rel="stylesheet" href="../static/styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Monomaniac+One&family=Rubik:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <div id="titulo" class="titulo">
+            <label>Log-in</label>
+        </div>
+        <div class="inputs">
+            <input class="input" type="text" id="input-email" placeholder="e-mail"">
+            <input class="input" type="password" id="input-senha" placeholder="senha">
+            <button type="button" id="mostrarSenha" onclick="mostrarSenha('input-senha')">👁️‍🗨️</button>
+        </div>
+        <div class="campo-esqueci-senha">
+            <a href="" class="esqueci-senha" id="esqueci-senha">Esqueci senha</a>
+        </div>
+        <div class="botoes">
+            <button class="botao" id="login">Login</button>
+            <button class="botao" id="registrar">Registrar</button>
+        </div>
+        <div class="footer">
+            <a href="https://parceirodocontador.com.br/store" target="_blank" rel="noopener noreferrer" class="footer" >Feito por Parceiro do Contador</a>
+        </div>
+    </div>
+    <div id="modal-relatorio-gerado" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <p>Relatórios gerados com sucesso!</p>
+        </div>
+    </div>
+    <div id="modal-relatorio-enviado" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <p>Relatórios enviados com sucesso!</p>
+        </div>
+    </div>
+    <div class="modal-carregando" class="modal">
+        <div class="carregando">
+            <span class="fechar-modal">&times;</span>
+            <img src="{{ url_for('static', filename='img/loading.png') }}" alt="carregando...">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/login.js') }}" type="module"></script>
+</body>
+</html>
